@@ -539,6 +539,13 @@ code {
   border-radius: 4px;
   padding: 2px 5px 0 5px; }
 
+pre code {
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+    border: 0px none;
+}
+
 blockquote {
   border-left: 3px solid rgba(0, 0, 0, 0.8);
   font-style: italic;
