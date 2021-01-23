@@ -48,6 +48,17 @@
     </div>
 
     <div class="entry-content">
+        {% if article.series %}
+        <p>Cet article est le numéro {{ article.series.index }} de la série {{ article.series.name }}.</p>
+        <ol class="parts">
+            {% for part_article in article.series.all %}
+                <li {% if part_article == article %}class="active"{% endif %}>
+                    <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a>
+                </li>
+            {% endfor %}
+        </ol>
+        {% endif %}
+
         {{ article.content }}
     </div>
 
